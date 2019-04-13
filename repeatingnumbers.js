@@ -1,5 +1,17 @@
 let repeatNumbers = function(data) {
-  // Put your solution here
+  var output = '';
+  var numsubarrays = data.length;
+  for(i = 0; i < numsubarrays; i++) {
+    var valuetorepeat = data[i][0];
+    var repeattimes = data[i][1];
+    for(j = 0; j < repeattimes; j++) {
+      output += valuetorepeat;// repeat 'i' 'j' times
+    }
+    if(numsubarrays > 1 && i < numsubarrays - 1) {
+      output += ', ';// add ', ' for sub arrays, excluding final one
+    }
+  }
+  return output;
 };
 
 console.log(repeatNumbers([[1, 10]]));
