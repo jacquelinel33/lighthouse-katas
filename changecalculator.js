@@ -13,7 +13,7 @@ let calculateChange = function(total, cash) {
   };
   var delta = cash - total;
   var runningtotal = delta;// initialize running total; to be reduced
-  console.log('The difference is ' + delta + '.');
+  //console.log('The difference is ' + delta + '.');
 
   for (var key in denominations) {
   var currentdenom = denominations[key];// 2000, 1000 etc; numerical value
