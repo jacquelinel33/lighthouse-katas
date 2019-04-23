@@ -1,13 +1,8 @@
 const squareCode = function(message) {
-  var message = message.replace(/\s/g, '');// remove all spaces in message
+  message = message.replace(/\s/g, '');// remove all spaces in message
   var columns = Math.ceil(Math.sqrt(message.length));
-  var rows = Math.ceil(message.length / columns);
-  var finalrow = columns;
-  if(message.length % columns > 0) {
-    finalrow = message.length % columns;//if final row is not full
-  }
+  var i, j;
   var output = '';
-  //console.log(message + " " + rows + " rows " + columns + " columns and " + finalrow + " chars in the final row");
   for(i = 0; i < columns; i++) {// iterate for each of the columns
     for(j = i; j < message.length; j += columns) {
       output += message[j];// nested loop adds characters according to row and column size
