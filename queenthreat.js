@@ -14,7 +14,7 @@ const generateBoard = function(whiteQueen, blackQueen) {
   output[whiteQueeny][whiteQueenx] = 1;// assign white Queen
   output[blackQueeny][blackQueenx] = 1;// assign black Queen
   return output;
-}
+};
 const queenThreat = function(gameboard) {
   var canAttack = false;
   var i, j;
@@ -79,7 +79,7 @@ const queenThreat = function(gameboard) {
     }
   }
   return canAttack;
-}
+};
 
 let whiteQueen = [0, 5];
 let blackQueen = [5, 0];
@@ -90,5 +90,5 @@ console.log(queenThreat(generatedBoard));
 whiteQueen = [0, 0];
 blackQueen = [7, 5];
 generatedBoard = generateBoard(whiteQueen, blackQueen);
-console.log(generatedBoard)
+console.log(generatedBoard);
 console.log(queenThreat(generatedBoard));
