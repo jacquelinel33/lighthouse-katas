@@ -4,8 +4,9 @@ let randomNumber = parseInt(Math.random() * maxNumber);// generate random number
 
 const compareNumbers = function(knownNumber) {
   var attempts = 0;
+  var guess;
   do {
-  var guess = prompt("Guess a number: ");
+  guess = prompt("Guess a number: ");
   attempts++;
     if(guess > knownNumber) {
       console.log('Too High!');
@@ -17,7 +18,7 @@ const compareNumbers = function(knownNumber) {
       console.log('You got it! You took ' + attempts + ' attempts!');
     }
   } while (guess != knownNumber);
-}
+};
 
 //console.log('The random number is: ' + randomNumber);
 compareNumbers(randomNumber);
